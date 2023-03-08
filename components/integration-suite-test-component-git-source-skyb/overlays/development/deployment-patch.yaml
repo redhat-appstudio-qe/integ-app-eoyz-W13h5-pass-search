@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: integration-suite-test-component-git-source-skyb
+  namespace: integration-e2e-tenant
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-appstudio-qe/test-images@sha256:b3583bde6dfa4ba0a3d7cb5df09114de421d8a46ac3a05339fa1ef5d9d27e6a7
+        name: my-python
+        resources: {}
+status: {}
